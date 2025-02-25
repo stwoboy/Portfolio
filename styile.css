@@ -1,0 +1,422 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    outline: none;
+    border: none;
+    font-family: system-ui;
+    scroll-behavior: smooth;
+}
+
+
+/*----------------------------------------------------------------*/
+/* Navihation bar*/
+.main{
+    width: 100%;
+    background-color:  black;
+    color:chocolate;
+    position: relative;
+    height: 100vh;
+    background-image: url('SL_0210121_40570_75.jpg');
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100vw;
+
+}
+
+.main h2 span{
+    position: relative;
+    display: inline-block;
+    color: transparent;
+    -webkit-text-stroke: .07rem chocolate;
+    animation: displa-text 16s linear infinite;
+    animation-delay: calc(-4s * var(--i)) ;
+
+}
+@keyframes display-text{
+
+    25%,
+    100%{
+        display: none;
+    }
+}
+.main h2 span::before{
+    content: attr(data-text);
+    position: absolute;
+    width: 0;
+    border-right: .2rem solid chocolate;
+    color: chocolate;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: fill-text 4s linear infinite;
+
+}
+@keyframes fill-text{
+    10%,100%{
+        width: 0;
+    }
+    70%,90%{
+        width: 100%;
+    }
+}
+
+
+nav{
+    
+    display: flex;
+    font-weight: bold;
+    text-decoration: none;
+    justify-content: space-between;
+    padding: 15px 35px;
+    align-items: center;
+    border-bottom: 1px solid chocolate;
+    background-color: black;
+    height: 4rem;
+    
+}
+.logo{
+    font-weight: bold;
+    font-size: 1rem;
+    color: chocolate;
+    cursor: pointer;
+    transition:ease 1000ms;
+}
+.logo span{
+    color: white;
+}
+.logo:hover{
+    transform: scale(1.1);
+}
+nav ul{
+    display: flex;
+    gap: 25px;
+    }
+nav a{
+    font-size: .8ram;
+    font-weight: bold;
+    color: chocolate;
+    cursor: pointer;
+    transition: 1000ms;
+
+}
+
+nav a:hover{
+    font-size: .8ram;
+    color: white;
+
+}
+
+nav a:hover,nav ul .active{
+    color: white;
+}
+
+/*----------------------------Conent------------------------------------*/
+
+
+
+.info{
+    max-width: 750px;
+    padding: 10px 25px;
+    color: white;
+    position: absolute;
+    top:30%;
+    left: 4%;
+}
+.info h1{
+    font-size: 3rem;
+    font-weight: bold;
+    padding: 5px 5px
+}
+.info h2{
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 5px 5px;
+    color:chocolate;
+}
+.info p{
+    font-size: .95rem;
+    font-weight: bold;
+   
+}
+
+/*buttons*/
+.btn{
+    margin: 20px 0;
+    width: 300px;
+    gap: 2rem;
+    display: flex;
+
+}
+.btn button{
+    padding: 10px 27px;
+    background: chocolate;
+    border-radius: 50px;
+}
+.btn button a{
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+.btn .sbtn{
+    color: chocolate;
+    background-color: transparent;
+    border: 1px solid chocolate;
+}
+.btn .sbtn a{
+    color:chocolate;
+}
+
+/*icons*/
+.haeder-socials{
+    display: flex;
+    margin: 20px;
+    gap: 2rem;
+}
+
+.haeder-socials a i{
+    color: chocolate;
+    cursor: pointer;
+    
+    ;
+    
+
+    
+}
+/*----------image-------*/
+
+
+
+.hom-img {
+    position: absolute;
+    top: 30px;
+    left: 130%;
+    max-width: 300px;
+    object-fit: cover;
+    padding-left: 5%;
+}
+.hom-img img{
+    height: 370px;
+    width: 350px;
+    border: 4px solid chocolate;
+    border-radius: 50%;
+    backdrop-filter: blur(5px);
+    background: rgba(255,255,255,0.05);
+}
+
+    
+
+
+/*_______________________________About page______________________________________*/
+
+.about{
+    color: white;
+    margin: 5px;
+   padding: 5%;
+}
+.about i{
+    color: aqua;
+    bottom :80px;
+    left: 1399px;
+    position: fixed;
+    
+}
+.about i:hover{
+    color: chocolate;
+    transform: matrix(0.1rem);
+}
+.about-content{
+    padding: 5%;
+}
+.about-content ul li{
+    list-style:circle;
+    padding-top: 1%;
+}
+.heading{
+    padding-top: 35px;
+    padding-bottom: 35px;
+    text-align: center;
+    color:  chocolate;
+}
+.about h1{
+    border: 2px solid chocolate;
+    width: 300px;
+    border-radius: 50px;
+    text-align: center;
+    font-family: fantasy, monospace;
+}
+.about h2{
+    padding: 20px 0 20px;
+    color: chocolate;
+}
+.about h3{
+    padding-bottom: 15px;
+    padding-top: 15px;
+    color: chocolate;
+    font-family: serif;
+}
+.about ul{
+    margin: 10px;}
+
+/*_________________________________________________contact us_______________________________________________________*/
+.contact{
+    color: white;
+   padding: 5%;
+}
+.cont{
+    border-right: 1px solid chocolate;
+    width: 50%
+}
+.heading{
+    padding-top: 35px;
+    padding-bottom: 35px;
+    color:  chocolate;}
+.contact-content{
+    padding-top: 500px;
+    border: 1px solid chocolate;
+    padding: 5%;
+    display: flex;
+    justify-content: space-between;
+    backdrop-filter: blur(5px);
+    background: rgba(255,255,255,0.2);
+}
+.contact h1{
+    border: 2px solid chocolate;
+    width: 300px;
+    border-radius: 50px;
+    text-align: center;
+    font-family: fantasy, monospace;
+}
+.contact h2{
+    padding: 15px 0 15px;
+    color: chocolate;
+}
+.contact h3{
+    padding-bottom: 10px;
+    padding-top: 10px;
+    color: chocolate;
+    font-family: serif;
+}
+.contact ul{
+    margin: 10px;
+
+}
+
+/*icons*/
+.socials{
+    
+    margin: 20px;
+    gap: 2rem;
+}
+
+.socials a i{
+    color: chocolate;
+    cursor: pointer;
+    
+    
+
+    
+}
+.soc-icons{
+    display: flex;
+    gap: 3%;
+    padding-top: 2%;
+}
+.soc-icons a i{
+    color: white;
+    
+}
+/*________________________________________projects______________________________________________________*/
+.project-heading{
+    color: chocolate;
+    padding-top: 35px;
+    padding-bottom: 35px;
+    
+    
+}
+
+.project-heading h1{
+    border: 2px solid chocolate;
+    width: 300px;
+    border-radius: 50px;
+    text-align: center;
+    font-family: fantasy, monospace;
+}
+.project-content h2{
+    padding: 15px 0 15px;
+    color: chocolate;
+}
+.project-content h3{
+    padding-bottom: 10px;
+    padding-top: 10px;
+    color: chocolate;
+    font-family: serif;
+}
+.project-content p{
+    color: white;
+}
+.project-content{
+    border: 1px solid chocolate;
+    padding: 4%;
+}
+.projects{
+    padding: 5%;
+}
+
+
+/*_________________________________________________footer_______________________________________________________*/
+
+
+footer{
+    color: chocolate;
+    text-align: center;
+    font-style: italic;
+    border: 1px solid chocolate;
+    background-color: black;
+    
+}
+footer p{
+    margin: 10px;
+}
+
+/*______________________________________navigation bars________________________________________________*/
+
+.page-nav{
+   
+    
+
+}
+
+.right a{
+    color: aqua;
+     
+}
+.left a{
+    color: aqua;
+}
+.left i:hover{color: white;}
+.right i:hover{color: white;}
+
+.right i{
+   
+       
+        bottom :50%;
+        left: 1469px;
+        position: fixed;
+        
+    
+}
+.left i{
+    position: fixed;
+    right:1469px ;
+    bottom: 50%;
+}
+
+.about-content .page-nav .left i{
+    position: fixed;
+    right:1469px ;
+    bottom: 50%;
+}
